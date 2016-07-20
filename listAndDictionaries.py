@@ -4,8 +4,11 @@
     square_list.sort()
     list.index('duck')
     list.insert(index, 'duck') # shifts everything right
-    list.remove('duck')
+    list.remove('duck') # removes the item if it finds it
     list.append('dog')
+    list.pop(index)     # removes the element and returns it  n = list.pop[0]
+    del(list[index])    # removes item but does not return it
+    len(list)           # returns the length of a list
 
     Dictionary Commands
     menu = {}           # Empty dictionary
