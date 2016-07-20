@@ -1,5 +1,6 @@
 """
     A Simple Game of Battleship
+    improved a bit from the codecademy version
 """
 
 from random import randint
@@ -10,6 +11,7 @@ grid_size = 5
 #print(range(grid_size))
 #print(["0"] * 5)
 
+# Initialize the Board to all 'O'
 for i in range(grid_size):
     board.append(["O"] * grid_size)
 
@@ -32,8 +34,20 @@ print()
 
 for turn in range(5):
     print("Turn: %i" % (turn + 1))
-    guess_row = int(input("Guess Row: "))
-    guess_col = int(input("Guess Col: "))
+
+    while True:     # Checking for invalid inputs
+        try:
+            guess_row = int(input("Guess Row: "))
+            break
+        except ValueError:
+            print("enter an integer")
+
+    while True:
+        try:
+            guess_col = int(input("Guess Col: "))
+            break
+        except ValueError:
+            print("enter an integer")
 
     if guess_row == ship_row and guess_col == ship_col:
         board[guess_row][guess_col] = "X"
