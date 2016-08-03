@@ -46,5 +46,14 @@ def is_prime(x):
 # for i in range(2,30):
 #     print(i)
 
-for i in range(31):
-    print('{:>2} is a prime number: {}'.format(i,is_prime(i)))
+# for i in range(31):
+    # print('{:>2} is a prime number: {}'.format(i,is_prime(i)))
+
+def reverse(text):
+    rev = []
+    for i in range(len(text)):
+        rev.append(text[-(i+1)])
+    output = ''.join(rev)
+    return output
+
+# print(reverse("123456%^&*"))
