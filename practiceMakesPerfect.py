@@ -88,4 +88,59 @@ def censor(text, word):
     text = text.replace(word, new)
     return text
 
-print(sensor('this hack is wack hack', 'hack'))
+# print(sensor('this hack is wack hack', 'hack'))
+
+def count(sequence, item):
+    count = 0
+    for i in sequence:
+        if i == item:
+            count += 1
+    return count
+
+# print(count([4, 'foo', 5, 'foo'],5))
+
+def purify(l):
+    output = []
+    for i in l:
+        if i % 2 == 0:
+            output.append(i)
+    return output
+
+# print(purify([1,2,3,4,5,6,7,8,9,10]))
+
+def product(l):
+    total = 1
+    for i in l:
+        total = total * i
+    return total
+
+# print(product([4,5,5]))
+
+def remove_duplicates(l):
+    new = []
+    for e in l:
+        if e not in new:
+            new.append(e)
+    return new
+
+# print(remove_duplicates([1,1,1,2,3,4,4,4,5,6,7,7,8,8,0,0]))
+
+def median(l):
+    new_list = sorted(l)
+    print(new_list)
+    output = 0
+    med = 1.01
+
+    if len(new_list) % 2 == 0:
+        index = int(len(new_list) / 2)
+        # print('index {}'.format(index))
+        med = (new_list[index - 1] + new_list[index]) / 2.0
+        # print(new_list[index - 1])
+        # print(new_list[index])
+    else:
+        med = new_list[int(len(new_list)/2)]
+
+    return med
+
+print(median([1,8,3,9,1,1]))
+print(median([1,8,3,7,9,1,1]))
