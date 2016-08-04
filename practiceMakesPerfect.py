@@ -80,4 +80,12 @@ def scrabble_score(word):
     #print(total)
     return total
 
-print('total = {}'.format(scrabble_score("Helix")))
+# print('total = {}'.format(scrabble_score("Helix")))
+
+def censor(text, word):
+    new = '*' * len(word)
+    new
+    text = text.replace(word, new)
+    return text
+
+print(sensor('this hack is wack hack', 'hack'))
