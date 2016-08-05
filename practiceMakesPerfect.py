@@ -127,7 +127,7 @@ def remove_duplicates(l):
 
 def median(l):
     new_list = sorted(l)
-    print(new_list)
+    # print(new_list)
     output = 0
     med = 1.01
 
